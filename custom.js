@@ -1,3 +1,7 @@
+var viewportWidth = $(window).width();
+var viewportHeight = $(window).height();
+var protocolRef=0<=location.href.toLowerCase().indexOf("https")?"https:":"http:";
+
 function createDialog(b, a) {
     var c = a ? $("#rootDiv" + a.primeKey) : $("#rootDiv");
     a || (a = {
@@ -43,7 +47,7 @@ function hideDialog(b) {
     b.length ? b.remove() : $(b).parents("[id^=alertBox]").remove()
 }
 
-$.fn.customDDPlugin = function(SPObj)
+$.fn.customDDPlugin = function(DDObj)
 {	
 	var _obj = 
 	{
@@ -81,8 +85,8 @@ $.fn.customDDPlugin = function(SPObj)
 		isAndroid: (navigator.userAgent.toLowerCase().indexOf("android") > -1)? true : false,
 		finishFlag: true
 	}
-	var protocolRef = "_";
-	$.extend(_obj, SPObj);
+
+	$.extend(_obj, DDObj);
 
 	_obj.posX = Math.round((_obj.stageWidth - (_obj.pileArray.length * _obj.pileWidth + (_obj.pileArray.length - 1) * _obj.pileDistance))/2);
 	if(_obj.posX < 0)
@@ -98,10 +102,10 @@ $.fn.customDDPlugin = function(SPObj)
 
 
 
-	// if($("meta[name=viewport]").length && viewportSize.getWidth() < _obj.stageWidth)
-	// {
-	// 	$("meta[name=viewport]").prop('content', 'width=' + (_obj.stageWidth + 20));
-	// }
+	if($("meta[name=viewport]").length && viewportWidth < _obj.stageWidth)
+	{
+		$("meta[name=viewport]").prop('content', 'width=' + (_obj.stageWidth + 20));
+	}
 
 
 
@@ -649,7 +653,7 @@ $.fn.customDDPlugin = function(SPObj)
 		}
 		else
 		{
-			if(ref.prop("id").indexOf("openEnd") != -1 && $("#openEnd" + _obj.primeKey + refId).prop("disabled") == false && ("ontouchstart" in document.documentElement || (window.navigator.msPointerEnabled && viewportSize.getWidth() < 1200)))
+			if(ref.prop("id").indexOf("openEnd") != -1 && $("#openEnd" + _obj.primeKey + refId).prop("disabled") == false && ("ontouchstart" in document.documentElement || (window.navigator.msPointerEnabled && viewportWidth < 1200)))
 			{
 				ref.parent().draggable({disabled: true});
 				clearTimeout(_obj.timer);
