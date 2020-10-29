@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<HTML>
+ <HEAD>
+  <TITLE>HTML5 Demo</TITLE>
+  <!--<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="http://d3c7o8x2i12pye.cloudfront.net/LayoutSL2015/jquery-1.9.1.min.js"></script>
+  <style>
+  #forwardbutton{visibility:hidden}
+  </style>
+ </HEAD>
+
+ <BODY ondragstart = "return false">
+ <center>
+
+
+
+<script>
+var DDObj = {
+cardArray: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],  
+cardText: ["Efficacy","Safety / tolerability","Product formulation (e.g., IV vs. oral)","Dosing schedule","Indication breadth","Historical familiarity with using and purchasing the product","Patient convenience","Storage logistics (e.g., shelf life, refrigeration)","Administration logistics (e.g., staff time required, chair time required)","Hurdles to insurance coverage","Number of available alternatives","Patient out-of-pocket costs","Drug acquisition cost","Total cost of care","Drug reimbursement amount","Revenue contribution","<span style='text-decoration:underline' title='Tooltip goes here'>Margin / net cost recovery</span>"], //Please pass the text in the same order of precodes passed to the cardArray parameter//
+errMsg1: "Please drag each card over the given piles.",
+errMsg3: "Already 3 in this pile.",
+headingtext: "STRONG INFLUENCE",
+bootomtext: "NO INFLUENCE"
+};
+$(document).on("ready", function(){$("#DDparent").customDDPlugin(DDObj)});
+</script>
+<div id="DDparent" align="center"><img src="http://dcqhpema7gk9a.cloudfront.net/IND/HTML5/loader.gif" style="margin:100px"></div><br>
+<link rel="stylesheet" href="custom.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="custom.js"></script>
+
+
+
+
+ <form action="http://www.google.co.in">
+ <input type="button" value="   >>   " id="forwardbutton" />
+ </form>
+ </center>
+  <script>
+  function setValue(a,b)
+  {
+	alert(a);
+	alert(b);
+	document.getElementById("forwardbutton").click();
+  }
+  </script>
+ </BODY>
+</HTML>

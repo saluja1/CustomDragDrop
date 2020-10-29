@@ -1,0 +1,81 @@
+  body
+  {
+	-webkit-text-size-adjust: 100%;
+  }
+
+  div[id^="rootDiv"]
+  {
+	font-family: Arial, Verdana;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	cursor: default;
+	text-align: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-focus-ring-color: rgba(255, 255, 255, 0);
+	outline: none;
+  }
+
+  .shadowClass
+  {
+	box-shadow: 3px 3px 2px rgba(153,153,153,1);
+  }
+
+  .darkShadowClass
+  {
+	box-shadow: 3px 3px 2px rgba(100,100,100,1);
+  }
+
+  .textShadowClass
+  {
+	text-shadow: 0 -2px 4px #FFF,
+	0 -4px 8px #FFF,
+	0 -6px 12px #FFF,
+	0 2px 4px #FFF,
+	0 4px 8px #FFF,
+	0 6px 12px #FFF;
+  }
+
+  .buttonClass
+  {
+	text-align: center;
+	background-image: url(//dcqhpema7gk9a.cloudfront.net/IND/HTML5/button.png);
+	font-weight: bold;
+	line-height: 36px;
+	position: absolute;
+	cursor: pointer;
+  }
+
+  .borderClass
+  {
+	border-style: solid;
+	border-color: #666666;
+	border-width: 1px;
+  }
+
+  .activatedClass
+  {
+	border-style: solid;
+	border-color: #ff0000;
+	border-width: 1px;
+  }
+
+  .msTouchClass
+  {
+	-ms-touch-action: none;
+  }
+
+  div
+  {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+  }
